@@ -22,7 +22,7 @@ method:dict={'forward_push':forward_push,
              
 node_id=0
 alpha=0.15
-adj_matrix=sp.load_npz('../datasets/directed_web-stanford_csr_matrix.npz')
+adj_matrix=sp.load_npz('./datasets/directed_web-stanford_csr_matrix.npz')
 
 true_ppr=power_iteration(adj_matrix,node_id,1e-10,1-alpha)[0]
 for k,v in method.items():
